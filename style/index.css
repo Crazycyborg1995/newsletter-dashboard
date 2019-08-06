@@ -37,10 +37,19 @@ body {
   display: block;
   width: 100%;
   height: 100%;
+  color: #111;
   font-size: 1.5rem;
-  color: #d83a64;
   text-decoration: none;
   cursor: pointer;
+}
+.dashboard-box h1 {
+  color: #d83a64;
+}
+
+.dashboard-box h3,
+.dashboard-box p {
+  margin: 1rem;
+  text-align: left;
 }
 
 .dashboard-box:hover {
