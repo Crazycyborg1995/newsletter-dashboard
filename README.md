@@ -1,3 +1,3 @@
 # newsletter-dashboard
 
-Live Demo : [Click Here](https://github.com/Crazycyborg1995/newsletter-dashboard)
+Live Demo : [Click Here](https://crazycyborg1995.github.io/newsletter-dashboard/)
