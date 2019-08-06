@@ -9,10 +9,10 @@
   </head>
   <body>
     <div class="container">
-      <!-- Go Back Button -->
-      <div class="back__button-container">
-        <button id="go-back" class="back__button">Go Back</button>
-      </div>
+    <!-- Go Back Button -->
+    <div class="back__button-container">
+      <a href="../index.html" class="back__button">Go Back</a>
+    </div>
 
       <!-- Header Part -->
       <header class="header">
@@ -356,12 +356,6 @@
 
     <script>
       let links = Array.from(document.querySelectorAll('.newsletter__link'));
-      let goBackBtn = document.getElementById('go-back');
-
-
-      goBackBtn.addEventListener('click', e => {
-        window.history.back();
-      })
 
       links.forEach(link =>  {
         link.addEventListener('click', (e) => {

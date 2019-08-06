@@ -12,7 +12,7 @@
     <div class="container">
       <!-- Go Back Button -->
       <div class="back__button-container">
-        <button id="go-back" class="back__button">Go Back</button>
+        <a href="../index.html" class="back__button">Go Back</a>
       </div>
       
       <!-- Header Part -->
@@ -355,11 +355,6 @@
 
     <script>
       let links = Array.from(document.querySelectorAll('.newsletter__link'));
-      let goBackBtn = document.getElementById('go-back');
-      
-      goBackBtn.addEventListener('click', e => {
-      window.history.back();
-      })
 
       links.forEach(link =>  {
         link.addEventListener('click', (e) => {
