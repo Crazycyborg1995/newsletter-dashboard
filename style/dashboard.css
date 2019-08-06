@@ -67,10 +67,10 @@ body {
 .back__button {
   padding: 1.5rem;
   margin: 2rem auto;
+  text-decoration: none;
+  color: #333;
   font-size: 1.5rem;
   font-weight: lighter;
-  text-decoration : none;
-  color : #000;
   text-transform: uppercase;
   cursor: pointer;
   background: #fff;
