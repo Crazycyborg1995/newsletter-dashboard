@@ -1,0 +1,283 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.7;
+}
+
+/* Global Varibales */
+
+.empty-space {
+  height: 5rem;
+}
+
+.f-m {
+  font-size: 1.6rem;
+}
+
+.f-l {
+  font-size: 2.2rem;
+}
+
+.lead {
+  font-size: 1.5rem;
+  color: #484848;
+}
+.container {
+  margin: 5rem auto 10rem;
+  max-width: 60rem;
+}
+
+.main,
+.footer {
+  padding: 1rem 2rem;
+}
+
+.progress {
+  height: 5px;
+  width: 10%;
+}
+
+.progress--pink {
+  background: #d83a64;
+}
+
+.progress--blue {
+  background: #2bafff;
+}
+.newsletter__heading {
+  color: #1b51a0;
+}
+
+/* Go Back Button */
+.back__button-container {
+  text-align: center;
+}
+
+.back__button {
+  padding: 1.5rem;
+  margin: 2rem auto;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: #fff;
+  display: block;
+  width: 20rem;
+  border: 1px solid #ddd;
+  transition: all 200ms;
+}
+
+.back__button:hover,
+.back__button:focus {
+  background: #d83a64;
+  color: #fff;
+}
+
+/* Header Part */
+
+.header__main-title {
+  font-size: 3.6rem;
+  color: #1b51a0;
+}
+.header {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: 60% 40%;
+  padding: 2rem;
+  background: #2bafff;
+  border-bottom: 3rem solid #1b51a0;
+}
+
+.header__main {
+  display: grid;
+  grid-row-gap: 1rem;
+}
+
+.header__stamp-img,
+.header__main-logo {
+  width: 10rem;
+}
+
+.header__main-caption {
+  color: #fff;
+}
+
+.header__main-episode {
+  color: #1b51a0;
+  font-weight: 800;
+}
+
+/* Postal */
+
+.postal {
+  display: flex;
+  justify-content: center;
+}
+
+.postal__background {
+  margin: 2rem 0;
+  width: 85%;
+  border-top: 16px solid transparent;
+  border-image: 15
+    repeating-linear-gradient(
+      -45deg,
+      #d83a64 0,
+      #d83a64 1.2rem,
+      transparent 0,
+      transparent 2.4rem,
+      #26529c 0,
+      #26529c 3.6rem,
+      transparent 0,
+      transparent 4.8rem
+    );
+}
+
+/* Introduction */
+
+.intro {
+  padding: 1rem 0 2rem;
+  display: grid;
+  grid-row-gap: 1.5rem;
+}
+
+.newsletter__subheading {
+  color: #2bafff;
+}
+
+.newsletter {
+  padding: 1rem 0 2rem;
+  display: grid;
+  grid-row-gap: 1.2rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.newsletter__link {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  font-size: 1.4rem;
+  text-align: center;
+  margin: 0 0.5rem;
+  color: #333;
+  text-decoration: none;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+.newsletter__link::before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: translateY(calc(100% - 2px));
+  transition: transform 100ms ease-out;
+}
+
+.newsletter__link--blue::before {
+  background: linear-gradient(60deg, #1b51a0 0%, #2bafff 100%);
+}
+
+.newsletter__link--pink::before {
+  background: linear-gradient(60deg, #d83a64 0%, #f189a5 100%);
+}
+.newsletter__link:hover,
+.newsletter__link:focus {
+  color: #fff;
+}
+
+.newsletter__link:hover::before,
+.newsletter__link:focus::before {
+  transform: translateY(0);
+}
+
+.newsletter__footer {
+  color: #817474;
+  font-size: 1.5rem;
+}
+
+.newsletter__time,
+.newsletter__date {
+  font-size: 1.3rem;
+}
+
+.newsletter__bullets {
+  padding-left: 4rem;
+}
+
+/* Footer */
+.footer {
+  display: grid;
+  grid-row-gap: 1.7rem;
+}
+
+.footer__link {
+  font-size: 1.6rem;
+  color: #15c;
+  text-decoration-color: #15c;
+}
+
+.footer__text {
+  margin-top: 3rem;
+}
+
+/* Media Queries */
+
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+
+  .container {
+    width: 80vw;
+  }
+  .header {
+    width: 100%;
+  }
+  .header__main-logo,
+  .header__stamp-img {
+    width: 9rem;
+  }
+  .header__main-title {
+    font-size: 3.4rem;
+  }
+
+  .newsletter {
+    padding: 2rem 0 2.5rem;
+  }
+
+  .empty-space {
+    height: 3rem;
+  }
+}
+
+@media (max-width: 33em) {
+  .header__main-logo,
+  .header__stamp-img {
+    width: 7rem;
+  }
+
+  .header__main-caption,
+  .header__main-episode {
+    font-size: 1.4rem;
+  }
+  .header__main-title {
+    font-size: 3rem;
+  }
+}
